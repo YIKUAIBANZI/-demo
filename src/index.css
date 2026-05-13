@@ -1,0 +1,81 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@theme {
+  --font-mono: "JetBrains Mono", "Courier New", Courier, monospace;
+  --font-sans: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --color-bg: #E4E3E0;
+  --color-ink: #141414;
+  --color-line: #141414;
+  --color-accent: #2563EB;
+  --color-card: #F3F3F1;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+}
+
+.agent-card {
+  border: 1px dashed var(--color-line);
+  background-color: var(--color-card);
+  transition: all 0.2s ease;
+}
+
+.agent-card.running {
+  border: 1px solid var(--color-accent);
+  box-shadow: 0 0 10px rgba(37, 99, 235, 0.1);
+}
+
+.agent-card.done {
+  border: 1px solid #10B981;
+}
+
+.tech-header {
+  font-family: 'Georgia', serif;
+  font-style: italic;
+  font-size: 13px;
+  opacity: 0.6;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.tech-value {
+  font-family: var(--font-mono);
+  letter-spacing: -0.02em;
+}
+
+.prose {
+  --tw-prose-body: var(--color-ink);
+  --tw-prose-headings: var(--color-ink);
+  --tw-prose-links: var(--color-accent);
+  --tw-prose-bold: var(--color-ink);
+  --tw-prose-counters: var(--color-ink);
+  --tw-prose-bullets: var(--color-ink);
+  --tw-prose-hr: var(--color-line);
+  --tw-prose-quotes: var(--color-ink);
+  --tw-prose-quote-borders: var(--color-accent);
+  --tw-prose-captions: var(--color-ink);
+  --tw-prose-code: var(--color-accent);
+  --tw-prose-pre-code: #f8fafc;
+  --tw-prose-pre-bg: #0f172a;
+  --tw-prose-th-borders: var(--color-line);
+  --tw-prose-td-borders: var(--color-line);
+}
+
+.prose h1, .prose h2, .prose h3 {
+  font-family: 'Georgia', serif;
+}
+
+.prose table {
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+}
+
+.prose th {
+  font-family: 'Georgia', serif;
+  font-style: italic;
+  font-weight: 400;
+  opacity: 0.8;
+}
